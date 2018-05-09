@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineHeadView" customModule="smartCity" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rCa-U6-IbE" customClass="MineHeadView" customModule="smartCity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mine_bg" translatesAutoresizingMaskIntoConstraints="NO" id="WZg-d3-PWF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hi~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6i-Pa-KR4">
+                    <rect key="frame" x="148.5" y="117" width="24" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSe-sg-BTw">
+                    <rect key="frame" x="265" y="18" width="51" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="FQG-Ir-Xjg"/>
+                        <constraint firstAttribute="width" constant="51" id="k3h-oO-tOP"/>
+                    </constraints>
+                    <state key="normal" image="mine_SetUp"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn5-7A-RBw">
+                    <rect key="frame" x="128" y="43" width="64" height="64"/>
+                    <state key="normal" image="mine_defaultHead"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GSe-sg-BTw" secondAttribute="trailing" constant="4" id="6TI-za-R2b"/>
+                <constraint firstItem="I6i-Pa-KR4" firstAttribute="centerX" secondItem="rCa-U6-IbE" secondAttribute="centerX" id="OB0-9P-r8I"/>
+                <constraint firstAttribute="bottom" secondItem="WZg-d3-PWF" secondAttribute="bottom" id="OSt-6V-eHl"/>
+                <constraint firstItem="WZg-d3-PWF" firstAttribute="top" secondItem="rCa-U6-IbE" secondAttribute="top" id="QlP-BV-qXa"/>
+                <constraint firstItem="WZg-d3-PWF" firstAttribute="leading" secondItem="rCa-U6-IbE" secondAttribute="leading" id="TpV-d7-4x5"/>
+                <constraint firstItem="Xn5-7A-RBw" firstAttribute="centerY" secondItem="rCa-U6-IbE" secondAttribute="centerY" id="ZQx-ho-fIs"/>
+                <constraint firstItem="Xn5-7A-RBw" firstAttribute="centerX" secondItem="rCa-U6-IbE" secondAttribute="centerX" id="j1y-MH-lWf"/>
+                <constraint firstItem="GSe-sg-BTw" firstAttribute="top" secondItem="rCa-U6-IbE" secondAttribute="top" constant="18" id="lI5-IT-VVo"/>
+                <constraint firstAttribute="trailing" secondItem="WZg-d3-PWF" secondAttribute="trailing" id="pM4-C2-Tb9"/>
+                <constraint firstAttribute="bottom" secondItem="I6i-Pa-KR4" secondAttribute="bottom" constant="15" id="rO2-pe-BhL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headButton" destination="Xn5-7A-RBw" id="FVy-16-JYp"/>
+                <outlet property="nickName" destination="I6i-Pa-KR4" id="Q90-VB-RKk"/>
+                <outlet property="settingButton" destination="GSe-sg-BTw" id="MJG-Pz-60m"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="-89"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mine_SetUp" width="21" height="20"/>
+        <image name="mine_bg" width="375" height="162"/>
+        <image name="mine_defaultHead" width="64" height="64"/>
+    </resources>
+</document>

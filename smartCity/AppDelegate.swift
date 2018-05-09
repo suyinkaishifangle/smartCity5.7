@@ -15,8 +15,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow.init(frame: BOUNDS)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = MainViewController()
+        window?.makeKeyAndVisible()
+        observeInternet()
+        
         return true
+    }
+    /**
+     observeInternet 网络监控
+     */
+    func observeInternet(){
+        let reachability = AFNetworkReachabilityManager.shared()
+        reachability.setReachabilityStatusChange { (status) in
+            // 当网络状态改变了, 就会调用这个block
+            switch status{
+            case .unknown:
+                debugPrint("未知网络")
+                
+            case .reachableViaWiFi,.reachableViaWWAN:
+                debugPrint("WIFi")
+            case .notReachable:
+                let alert = UIAlertView.init(title: "温馨提示", message: "当前网络不通畅，请检查您的网络设置", delegate: nil, cancelButtonTitle: "确定")
+                alert.show()
+            }
+        }
+        reachability.startMonitoring()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

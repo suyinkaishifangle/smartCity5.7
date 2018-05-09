@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeViewController" customModule="smartCity" customModuleProvider="target">
+            <connections>
+                <outlet property="frameImage" destination="7Fc-qy-kmL" id="LZZ-8n-LER"/>
+                <outlet property="lightButton" destination="OpP-mM-qKa" id="LwH-eJ-y7T"/>
+                <outlet property="lineY" destination="F7I-yg-4GM" id="9a4-Zo-V23"/>
+                <outlet property="messageLabel" destination="kz2-4Q-0St" id="3Gd-To-uNu"/>
+                <outlet property="saomaButton" destination="3cz-7p-SKo" id="ZLz-Yv-f8L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhongDuanNoButton" destination="XtI-yG-UWZ" id="hmu-tC-OGl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame" translatesAutoresizingMaskIntoConstraints="NO" id="7Fc-qy-kmL">
+                    <rect key="frame" x="31" y="98" width="258" height="258"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_scan_line" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-uZ-xPL">
+                    <rect key="frame" x="31" y="98" width="258" height="19"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码放入扫描框内，即可自动扫码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz2-4Q-0St">
+                    <rect key="frame" x="64.5" y="364" width="191" height="14"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                    <color key="textColor" red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-Rv-SFZ">
+                    <rect key="frame" x="0.0" y="493" width="320" height="75"/>
+                    <subviews>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtI-yG-UWZ">
+                            <rect key="frame" x="208" y="13" width="65" height="48"/>
+                            <state key="normal" image="input-defauit"/>
+                            <connections>
+                                <action selector="saoMaButtonClick:" destination="-1" eventType="touchUpInside" id="TwL-2i-X7G"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-7p-SKo">
+                            <rect key="frame" x="65" y="13" width="30" height="48"/>
+                            <state key="normal" image="Scan-code-pressed"/>
+                            <connections>
+                                <action selector="saoMaButtonClick:" destination="-1" eventType="touchUpInside" id="cyf-Vs-HWN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.62922731164383561" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="5Fx-1c-hwx"/>
+                        <constraint firstItem="3cz-7p-SKo" firstAttribute="centerY" secondItem="hmM-Rv-SFZ" secondAttribute="centerY" id="Awo-Z8-9ts"/>
+                        <constraint firstItem="XtI-yG-UWZ" firstAttribute="centerY" secondItem="hmM-Rv-SFZ" secondAttribute="centerY" id="JN9-SU-YWV"/>
+                        <constraint firstItem="3cz-7p-SKo" firstAttribute="centerX" secondItem="hmM-Rv-SFZ" secondAttribute="centerX" multiplier="0.5" id="Tc9-sE-Tow"/>
+                        <constraint firstItem="XtI-yG-UWZ" firstAttribute="centerX" secondItem="hmM-Rv-SFZ" secondAttribute="centerX" multiplier="1.5" id="oB8-8C-rEE"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpP-mM-qKa">
+                    <rect key="frame" x="136.5" y="386" width="47" height="47"/>
+                    <state key="normal" image="flashlight"/>
+                    <connections>
+                        <action selector="openLight:" destination="-1" eventType="touchUpInside" id="5xs-vh-fw4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hmM-Rv-SFZ" secondAttribute="bottom" id="0cC-XY-fzI"/>
+                <constraint firstItem="kz2-4Q-0St" firstAttribute="top" secondItem="7Fc-qy-kmL" secondAttribute="bottom" constant="8" id="7Wu-3V-q3P"/>
+                <constraint firstItem="LjZ-uZ-xPL" firstAttribute="leading" secondItem="7Fc-qy-kmL" secondAttribute="leading" id="AK1-v5-RuX"/>
+                <constraint firstItem="LjZ-uZ-xPL" firstAttribute="top" secondItem="7Fc-qy-kmL" secondAttribute="top" id="F7I-yg-4GM"/>
+                <constraint firstItem="hmM-Rv-SFZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fqg-5m-EiP"/>
+                <constraint firstItem="7Fc-qy-kmL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.8" id="JPH-5d-Fw6"/>
+                <constraint firstItem="LjZ-uZ-xPL" firstAttribute="trailing" secondItem="7Fc-qy-kmL" secondAttribute="trailing" id="YIC-gH-U6A"/>
+                <constraint firstItem="7Fc-qy-kmL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f5F-gn-kLb"/>
+                <constraint firstAttribute="trailing" secondItem="hmM-Rv-SFZ" secondAttribute="trailing" id="kQM-Cn-JX0"/>
+                <constraint firstItem="OpP-mM-qKa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lhG-mE-FGB"/>
+                <constraint firstItem="kz2-4Q-0St" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yOc-N7-QRn"/>
+                <constraint firstItem="OpP-mM-qKa" firstAttribute="top" secondItem="kz2-4Q-0St" secondAttribute="bottom" constant="8" id="zR9-8K-x9i"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Scan-code-pressed" width="30" height="48"/>
+        <image name="flashlight" width="47" height="47"/>
+        <image name="frame" width="258" height="258"/>
+        <image name="home_scan_line" width="200" height="19"/>
+        <image name="input-defauit" width="65" height="48"/>
+    </resources>
+</document>
